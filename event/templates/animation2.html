@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+  --color-light: #FFA54F;
+  --color-medium: #FF9834;
+  --color-dark: #FF8919;
+  --color-darkest: #FF7C00;
+  --animation-speed: 8s;
+  --animation-loop: infinite;
+}
+
+*{
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes loader {
+  0%{
+    background: var(--color-dark);
+    width:0%;
+  }20%{
+    width:100%;
+  }39%{
+    background: var(--color-dark);
+  }40%{
+    background: var(--color-light);
+    width: 0%
+  }60%{
+    width: 100%;
+  }80%{
+    width:0%;
+  }100%{
+    background: var(--color-light);
+    width: 0%;
+  }
+}
+
+@keyframes loaderAlt {
+  0%{
+    background: var(--color-darkest);
+    width:100%;
+  }19%{
+    background: var(--color-darkest);
+  }20%{
+    background: var(--color-medium);
+    width: 0%;
+  }40%{
+    width: 100%;
+  }59%{
+    background: var(--color-medium);
+  }60%{
+    background: var(--color-darkest);
+    width: 0;
+  }80%{
+    width: 100%;
+  }100%{
+    background: var(--color-darkest);
+    width: 100%
+  }
+}
+
+.loader{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.loader__bar{
+  display: flex;
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.loader__bar:before{
+  animation: loader ease var(--animation-speed) var(--animation-loop);
+  animation-delay: 100ms;
+  background: var(--color-darkest);
+  background-size: 200% 200%;
+  content: "";
+  height:100%;
+  width: 0%;
+}
+
+.loader__bar:after{
+  animation: loaderAlt ease var(--animation-speed) var(--animation-loop);
+  animation-delay: 100ms;
+  background: var(--color-darkest);
+  background-size: 200% 200%;
+  content: "";
+  height: 100%;
+  width: 100%;
+}
+
+.loader__bar--delay-1:before,
+.loader__bar--delay-1:after{
+  animation-delay: 200ms;
+}
+
+.loader__bar--delay-2:before,
+.loader__bar--delay-2:after{
+  animation-delay: 300ms;
+}
+
+.loader__bar--delay-3:before,
+.loader__bar--delay-3:after{
+  animation-delay: 400ms;
+}
+
+.loader__bar--delay-4:before,
+.loader__bar--delay-4:after{
+  animation-delay: 500ms;
+}
+
+.loader__bar--delay-5:before,
+.loader__bar--delay-5:after{
+  animation-delay: 600ms;
+}
+    </style>
+<body>
+
+    <div class="loader">
+        <div class="loader__bar"></div>
+        <div class="loader__bar loader__bar--delay-1"></div>
+        <div class="loader__bar loader__bar--delay-2"></div>
+        <div class="loader__bar loader__bar--delay-3"></div>
+        <div class="loader__bar loader__bar--delay-4"></div>
+        <div class="loader__bar loader__bar--delay-5"></div>
+        <div>
+      </div>
+</body>
+</html>
