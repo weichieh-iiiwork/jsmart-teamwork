@@ -51,7 +51,7 @@ $page = $page < 1 ? 1 : $page;
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-5">活動管理</h1>
-      <p class="lead"><a href="../event/index.php">活動總覽</a> | <a href="../event/new.php">新增活動</a> | <a href="../event/logout.php?logout=1">登出</a></p>
+      <p class="lead"><a href="../event/index.php">活動總覽</a> | <a href="../event/new.php">新增活動</a></p>
     </div>
   </div>
 
