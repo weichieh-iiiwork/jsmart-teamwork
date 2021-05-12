@@ -1,7 +1,8 @@
 <?php
-session_start();
-require_once './db.inc.php';
-require_once './templates/adtpl-header.php';
+// 把session_start寫在adtpl-header.php
+// session_start();
+require_once '../db.inc.php';
+require_once '../templates/adtpl-header.php';
 
 ?>
 <div class="bg-light p-3">
@@ -16,7 +17,7 @@ require_once './templates/adtpl-header.php';
                         <h2 class="mt-5 mb-4 card-title pricing-card-title " >活動管理 </h2>
                         <p class="mb-2">請按下方按鈕<br>進入管理頁面</p>
                         <p class="mb-5">Please press the button below to enter the back end system page.</p>
-                        <button type="button" class="btn btn-lg btn-block btn-info ">Enter</button>
+                        <input type="button" class="btn btn-lg btn-block btn-info " value="Enter" onclick="location.href='../event/index.php'">
                     </div>
                 </div>
                 <div class="card mb-4 shadow-sm">
@@ -27,7 +28,7 @@ require_once './templates/adtpl-header.php';
                         <h2 class="mt-5 mb-4 card-title pricing-card-title " >文章管理 </h2>
                         <p class="mb-2">請按下方按鈕<br>進入管理頁面</p>
                         <p class="mb-5">Please press the button below to enter the back end system page.</p>
-                        <button type="button" class="btn btn-lg btn-block btn-info ">Enter</button>
+                        <input type="button" class="btn btn-lg btn-block btn-info " value="Enter" onclick="location.href='../article/index.php'">
                     </div>
                 </div>
                 <div class="card mb-4 shadow-sm">
@@ -67,4 +68,4 @@ require_once './templates/adtpl-header.php';
         </div>
     </div>
 
-    <?php require_once './templates/adtpl-footer.php'; ?>
+    <?php require_once '../templates/adtpl-footer.php'; ?>

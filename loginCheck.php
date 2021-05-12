@@ -39,7 +39,7 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword']) ){
         $arr = $stmt->fetchAll()[0];
 
         if( $_POST['identity'] === 'admin'){
-            header("Refresh: 3; url=./admin.php");
+            header("Refresh: 3; url=./admin_index/admin.php");
             $_SESSION['adminAccount'] = $arr['adminAccount'];
         } elseif( $_POST['identity'] === 'users') {
             header("Refresh: 3; url=./shoppingCart/index.php");
