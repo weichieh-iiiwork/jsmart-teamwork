@@ -42,9 +42,12 @@ require '../templates/tpl-header.php'
             ?>
                 <div class="col-6 col-md-4">
                     <div class="card mb-4">
-                        <img src="../images/items/<?php echo $arr[$i]['itemImg'] ?>" class="card-img-top" alt="...">
+                        <a href="./itemDetail.php?itemId=<?php echo $arr[$i]['itemId']?>">
+                            <img src="../images/items/<?php echo $arr[$i]['itemImg'] ?>" class="card-img-top" alt="...">
+                        </a>
                         <div class="card-body">
-                            <h4 class="card-text mb-4"><?php echo $arr[$i]['itemName'] ?></h4>
+                            <h5 class="card-text mb-4 font-weight-bold"><?php echo $arr[$i]['itemName'] ?></h5>
+                            <p>價格: <?php echo $arr[$i]['itemPrice'] ?></p>
                             <div class="card-buttom d-flex justify-content-between align-items-center">
                                 <!-- 透過href 傳送items的itemId(商品流水號)) -->
                                 <a href="./itemDetail.php?itemId=<?php echo $arr[$i]['itemId']?>" class="btn btn-outline-secondary">詳細內容</a>

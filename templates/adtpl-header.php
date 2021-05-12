@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>JSMART</title>
+    <title>JSMART(後台)</title>
     <style type="text/css">
         #contentTable {
             table-layout: fixed;
@@ -37,14 +37,14 @@
                 <a class="mr-3 text-info" href="#">活動管理</a>
                 <a class="mr-3 text-info" href="#">文章管理</a>
                 <a class="mr-3 text-info" href="./index.php">商品管理</a>
-                <a class="mr-3 text-info" href="./index.php">商品類別管理</a>
+                <a class="mr-3 text-info" href="./index.php">類別管理</a>
                 
                 <!-- 我的訂單顯示判斷 -->
                 <!-- isset($_SESSION["userAccount"]) -->
                 
                 <!-- 顯示註冊或會員您好 -->
                 <?php if (isset($_SESSION["adminAccount"])) { ?>
-                    <a class="mr-3 text-info" href="#">管理中心</a>
+                    <a class="mr-3 text-info" href="#">會員管理</a>
                     <span class="mr-3"><?php echo $_SESSION["adminAccount"] ?> 您好</span>
                 <?php } ?>
 

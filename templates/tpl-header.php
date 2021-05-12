@@ -61,9 +61,9 @@
                 <?php } ?>
                 
                 <?php if(!isset($_SESSION["userAccount"])){ ?>
-                        <a class="mr-3 btn btn-outline-dark" href="./login.php">登入</a>
+                        <a class="mr-3 btn btn-outline-dark" href="../login.php">登入</a>
                 <?php } else { ?>
-                        <a class="mr-3 btn btn-outline-dark" href="./logout.php">登出</a>
+                        <a class="mr-3 btn btn-outline-dark" href="../logout.php">登出</a>
                 <?php } ?>
             </div>
         </div>

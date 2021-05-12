@@ -9,7 +9,7 @@ require_once '../templates/tpl-header.php';
 <div class="container mt-5">
     <table id="contentTable" class="table text-center">
         <thead>
-            <tr class=" justify-content-center">
+            <tr class=" justify-content-center font-weight-bold">
                 <td style="width: 80px;">訂單編號</td>
                 <td style="width: 190px;">成立時間</td>
                 <td style="width: 100px;">總金額</td>
@@ -55,7 +55,7 @@ require_once '../templates/tpl-header.php';
                         $arrOrderItems = $stmtOrderItems->fetchAll();
                         ?>
                         <tr >
-                            <td style="vertical-align : middle;" rowspan="<?php echo count($arrOrderItems) ?>"><?php echo $arrOrders[$i]["orderId"] ?></td>
+                            <td class="font-weight-bold" style="vertical-align : middle;" rowspan="<?php echo count($arrOrderItems) ?>"><?php echo $arrOrders[$i]["orderId"] ?></td>
                             <td style="vertical-align : middle;" rowspan="<?php echo count($arrOrderItems) ?>"><?php echo $arrOrders[$i]['created_at'] ?></td>
                             <td style="vertical-align : middle;" rowspan="<?php echo count($arrOrderItems) ?>">$ <?php echo $arrOrders[$i]['orderPrice']?></td>
                             <?php

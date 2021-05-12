@@ -3,7 +3,7 @@
 $db_host = "localhost";
 $db_username = "test";
 $db_password = "T1st@localhost";
-$db_name = "jsmart_midterm";
+$db_name = "jsmart";
 // $db_name = "shopping_cart";
 
 $db_charset = "utf8mb4";

@@ -3,7 +3,7 @@ session_start();
 
 unset($_SESSION['userAccount']);
 
-header("Refresh: 3; url=./index.php");
+header("Refresh: 3; url=./shoppingCart/index.php");
 
 $objResponse['success'] = true;
 $objResponse['info'] = "您已登出";

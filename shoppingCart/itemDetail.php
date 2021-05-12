@@ -5,7 +5,7 @@ require '../templates/tpl-header.php'
 ?>
 
 <!-- 商品詳細頁面 -->
-<div class="wrap border d-flex mx-auto mt-5" style="width: 42rem;">
+<div class="wrap border d-flex mx-auto mt-5" style="width: 50rem;">
 <?php
     if( isset($_GET['itemId']) ){
         $sql="SELECT `items`.`itemId`, 
@@ -37,18 +37,18 @@ require '../templates/tpl-header.php'
             </div>
             <div class="col">
                 <div>
-                    <h5 class="card-title mt-5 border-bottom pb-3"><?php echo $arrItem["itemName"] ?></h5>
-                    <p class="card-text"><?php echo nl2br($arrItem["itemDescription"]) ?></p>
-                    <p>價格:<?php echo $arrItem["itemPrice"] ?></p>
+                    <h4 class="card-title mt-5 border-bottom pb-3 font-weight-bold"><?php echo $arrItem["itemName"] ?></h4>
+                    <p class="card-text ml-2"><?php echo nl2br($arrItem["itemDescription"]) ?></p>
+                    <p class="ml-2">價格: <?php echo $arrItem["itemPrice"] ?></p>
                 </div>
         
                 <form name="cartForm" id="cartForm" method="POST" action="./addCart.php">
-                    <div class="qty mt-5 mb-3 ">
+                    <div class="qty mt-5 mb-3 ml-2">
                         數量: <input type="number" name="cartQty" value="1" maxlength="5" min="1" max="<?php echo $arrItem["itemQty"] ?>">
                         <input type="hidden" name="itemId" value="<?php echo (int)$_GET['itemId'] ?>">
 
                     </div>
-                    <div class="">
+                    <div class="ml-2">
                         <input type="submit" class="btn btn-primary" name="smb" value="加入購物車">
                     </div>
         

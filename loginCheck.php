@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../db.inc.php';
+require_once './db.inc.php';
 $objResponse['success'] = false;
 $objResponse['info'] = "登入失敗";
     
@@ -42,7 +42,7 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword']) ){
             header("Refresh: 3; url=./admin.php");
             $_SESSION['adminAccount'] = $arr['adminAccount'];
         } elseif( $_POST['identity'] === 'users') {
-            header("Refresh: 3; url=./index.php");
+            header("Refresh: 3; url=./shoppingCart/index.php");
             $_SESSION['userAccount'] = $arr['userAccount'];
         }
 
