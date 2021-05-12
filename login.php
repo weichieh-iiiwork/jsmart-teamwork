@@ -28,7 +28,7 @@ session_start();
   <body>
     <nav>
         <div class="d-flex shadow-sm flex-column flex-md-row align-items-center px-3 py-4">
-            <h4 class="mr-md-auto pl-3">JSMART</h4>
+            <h3 class="mr-md-auto pl-3">JSMART</h3>
         </div>
     </nav>
     <div class="wrap mt-5 mx-auto py-3 text-align-center">

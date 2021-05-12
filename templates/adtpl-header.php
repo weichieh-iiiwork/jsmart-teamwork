@@ -40,10 +40,10 @@ require_once '../admin_index/adminCheckSession.php';
                 </h3>
             <div class="my-2 nav-buttons">
 
-                <a class="mr-3 text-info" href="#">活動管理</a>
-                <a class="mr-3 text-info" href="#">文章管理</a>
-                <a class="mr-3 text-info" href="./index.php">商品管理</a>
-                <a class="mr-3 text-info" href="./index.php">類別管理</a>
+                <a class="mr-3 text-info" href="../event/index.php">活動管理</a>
+                <a class="mr-3 text-info" href="../article/index.php">文章管理</a>
+                <a class="mr-3 text-info" href="../items/itemAdmin.php">商品管理</a>
+                <a class="mr-3 text-info" href="../category/category.php">類別管理</a>
                 
                 <!-- 我的訂單顯示判斷 -->
                 <!-- isset($_SESSION["userAccount"]) -->

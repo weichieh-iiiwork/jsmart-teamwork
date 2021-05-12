@@ -29,7 +29,9 @@
 
 <nav>
         <div class="d-flex shadow-sm flex-column flex-md-row align-items-center px-3 py-4">
-            <h3 class="mr-md-auto pl-3">JSMART</h3>
+            <h3 class="mr-md-auto pl-3 ">
+                <a class="text-dark" href="../shoppingCart/index.php">JSMART</a>
+                </h3>
             <div class="my-2 nav-buttons">
                 
                 <a class="mr-3 text-info" href="#">活動</a>
