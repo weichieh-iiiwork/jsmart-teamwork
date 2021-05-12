@@ -61,7 +61,7 @@ require_once '../templates/adtpl-header.php';
                         <h2 class="mt-5 mb-4 card-title pricing-card-title " >會員管理 </h2>
                         <p class="mb-2">請按下方按鈕<br>進入管理頁面</p>
                         <p class="mb-5">Please press the button below to enter the back end system page.</p>
-                        <button type="button" class="btn btn-lg btn-block btn-info ">Enter</button>
+                        <input type="button" class="btn btn-lg btn-block btn-info " value="Enter" onclick="location.href='../admin/admin.php'">
                     </div>
                 </div>
             </div>

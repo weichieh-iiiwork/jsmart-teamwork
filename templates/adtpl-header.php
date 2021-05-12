@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once '../admin_index/adminCheckSession.php';
 ?>
 
 <!-- 注意填寫路徑時，要以require 的index.php檔案為主 -->
