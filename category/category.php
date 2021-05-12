@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 require_once('../db.inc.php');
 //require_once('./checkAdmin.php');
 require_once('../templates/adtpl-header.php');

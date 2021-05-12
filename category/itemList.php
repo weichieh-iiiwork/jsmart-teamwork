@@ -1,8 +1,8 @@
 <?php
-session_start();
+// session_start();
 require_once('../db.inc.php');
 //require_once('./checkAdmin.php');
-require_once('../templates/tpl-header.php');
+require_once('../templates/adtpl-header.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +69,7 @@ require_once('../templates/tpl-header.php');
                     <div class="col-md-4 col-sm-6 filter-items" data-price="<?php echo $arr[$i]['itemPrice'] ?>">
                         <div class="card mb-3 shadow-sm">
                             <a href="./itemDetail.php?itemId=<?php echo $arr[$i]['itemId'] ?>">
-                                <img class="list-item" src="./images/items/<?php echo $arr[$i]['itemImg'] ?>">
+                                <img class="list-item" src="../images/items/<?php echo $arr[$i]['itemImg'] ?>">
                             </a>
                             <div class="card-body">
                                 <p class="card-text list-item-card"><?php echo $arr[$i]['itemName'] ?></p>
