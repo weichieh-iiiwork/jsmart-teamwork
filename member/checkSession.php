@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 
 //判斷是否登入 (確認先前指派的 session 索引是否存在)
 if( !isset($_SESSION['acc']) ) {

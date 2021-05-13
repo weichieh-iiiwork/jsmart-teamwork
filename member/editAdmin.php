@@ -1,11 +1,12 @@
 <?php
+session_start();
 require_once('./checkSession.php'); //引入判斷是否登入機制
 require_once('../db.inc.php'); //引用資料庫連線
 ?>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>我的 PHP 程式</title>
+    <title>JSMART(後台)</title>
     <style>
     .border {
         border: 1px solid;
