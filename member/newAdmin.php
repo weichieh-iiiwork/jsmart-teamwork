@@ -1,8 +1,11 @@
+<?php
+require_once("../templates/adtpl-header.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>JSMART(後台)</title>
+    <title>我的 PHP 程式</title>
     <style>
     .border {
         border: 1px solid;
@@ -13,9 +16,9 @@
     <nav>
         <div class="slogan">JSMART</div>
         <div class="navbar">
-          <a href="./regist.html">註冊</a>
+          <a href="./regist.php">註冊</a>
           <a href="./admin.php">會員管理</a>
-          <a href="./newAdmin.html">新增頁面</a>
+          <a href="./newAdmin.php">新增頁面</a>
           <a href="./logout.php?logout=1">登出</a>
         </div>
       </nav>
@@ -72,3 +75,6 @@
 
 </body>
 </html>
+<?php
+require_once("../templates/adtpl-footer.php");
+?>

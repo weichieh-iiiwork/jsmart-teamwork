@@ -1,4 +1,5 @@
 <?php
+require_once("../templates/adtpl-header.php");
 require_once('./checkSession.php'); //引入判斷是否登入機制
 require_once('../db.inc.php'); //引用資料庫連線
 
@@ -63,3 +64,7 @@ if( $stmt->rowCount() > 0 ){
 // $stmt = $pdo->prepare($sql);
 // $stmt->execute($arrParam);
 // header("Refresh: 3; url=./admin.php");
+?>
+<?php
+require_once("../templates/adtpl-footer.php");
+?>

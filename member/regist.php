@@ -1,18 +1,21 @@
+<?php
+require_once("../templates/adtpl-header.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSMART(後台)</title>
+  <title>註冊</title>
 </head>
 <body>
   <nav>
     <div class="slogan">JSMART</div>
     <div class="navbar">
-      <a href="./regist.html">註冊</a>
+      <a href="./regist.php">註冊</a>
       <a href="./admin.php">會員管理</a>
-      <a href="./newAdmin.html">新增頁面</a>
+      <a href="./newAdmin.php">新增頁面</a>
       <a href="./logout.php?logout=1">登出</a>
     </div>
   </nav>
@@ -49,3 +52,6 @@
   </form>
 </body>
 </html>
+<?php
+require_once("../templates/adtpl-footer.php");
+?>

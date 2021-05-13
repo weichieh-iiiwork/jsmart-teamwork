@@ -5,7 +5,7 @@ require_once('../db.inc.php'); //引用資料庫連線
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>JSMART(後台)</title>
+    <title>我的 PHP 程式</title>
     <style>
     .border {
         border: 1px solid;
@@ -92,7 +92,7 @@ require_once('../db.inc.php'); //引用資料庫連線
             <tr>
                 <td class="border">功能</td>
                 <td class="border">
-                    <!-- <a href="./delete.php?id=<?php echo $arr['id']; ?>">刪除</a> -->
+                    <a href="./delete.php?id=<?php echo $arr['id']; ?>">刪除</a>
                 </td>
             </tr>
         <?php

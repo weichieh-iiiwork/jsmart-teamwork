@@ -30,14 +30,14 @@ $stmt->execute($arrParam);
 print_r($stmt->fetchAll());
 
 if($stmt->rowCount() > 0 ) {
-  header("Refresh: 3; url=./admin.php");
+  header("Refresh: 3; url=./index.html");
   $_SESSION['username'] = $_POST['userAccount'];
 
   $objResponse['success'] = true;
   $objResponse['info'] = "註冊成功";
   echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
 } else {
-  header("Refresh: 3; url=./admin.php");
+  header("Refresh: 3; url=./index.html");
   $objResponse['info'] = "註冊失敗";
   echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
 }

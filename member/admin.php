@@ -1,6 +1,9 @@
 <?php
+require_once("../templates/adtpl-header.php");
 require_once('./checkSession.php');
 require_once('../db.inc.php');
+
+
 $sqlTotal = "SELECT count(1) AS `count` FROM `users`";
 $stmtTotal = $pdo->query($sqlTotal);
 $arrTotal = $stmtTotal->fetchAll()[0];
@@ -16,7 +19,7 @@ $page = $page < 1 ? 1 : $page;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSMART(後台)</title>
+  <title>我的 PHP 程式</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <style>
@@ -31,14 +34,12 @@ $page = $page < 1 ? 1 : $page;
 <body>
 <header>
   <nav>
-    <div class="slogan">
-      <a href="../admin_index/admin.php">JSMART</a>
-      </div>
+    <div class="slogan">JSMART</div>
     <div class="navbar">
-      <a href="./regist.html">註冊</a>
+      <a href="./regist.php">註冊</a>
       <a href="./admin.php">會員管理</a>
-      <a href="./newAdmin.html">新增頁面</a>
-      <!-- <a href="./logout.php?logout=1">登出</a> -->
+      <a href="./newAdmin.php">新增頁面</a>
+      <a href="./logout.php?logout=1">登出</a>
     </div>
   </nav>
 </header>
@@ -137,3 +138,6 @@ $page = $page < 1 ? 1 : $page;
   </form>
 </body>
 </html>
+<?php
+require_once("../templates/adtpl-footer.php");
+?>
