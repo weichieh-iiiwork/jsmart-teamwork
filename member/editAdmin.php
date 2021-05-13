@@ -1,5 +1,6 @@
 <?php
-session_start();
+// session_start();
+require_once '../templates/adtpl-header.php';
 require_once('./checkSession.php'); //引入判斷是否登入機制
 require_once('../db.inc.php'); //引用資料庫連線
 ?>
@@ -18,12 +19,12 @@ require_once('../db.inc.php'); //引用資料庫連線
 </head>
 <body>
 <nav>
-    <div class="slogan">JSMART</div>
+    <!-- <div class="slogan">JSMART</div> -->
     <div class="navbar">
       <a href="./regist.html">註冊</a>
       <a href="./admin.php">會員管理</a>
       <a href="./newAdmin.html">新增頁面</a>
-      <a href="./logout.php?logout=1">登出</a>
+      <!-- <a href="./logout.php?logout=1">登出</a> -->
     </div>
   </nav>
 <hr />
@@ -90,12 +91,12 @@ require_once('../db.inc.php'); //引用資料庫連線
                     <input type="text" name="address" value="<?php echo $arr['address']; ?>" maxlength="50" />
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td class="border">功能</td>
                 <td class="border">
                     <a href="./delete.php?id=<?php echo $arr['id']; ?>">刪除</a>
                 </td>
-            </tr>
+            </tr> -->
         <?php
         } else {
         ?>
@@ -114,5 +115,5 @@ require_once('../db.inc.php'); //引用資料庫連線
     </table>
     <input type="hidden" name="id" value="<?php echo (int)$_GET['id'] ?>">
 </form>
-</body>
-</html>
+
+<?php require_once '../templates/adtpl-footer.php' ?>

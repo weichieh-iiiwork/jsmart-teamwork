@@ -7,16 +7,16 @@ require_once("../templates/adtpl-header.php");
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>註冊</title>
+  <title>JSMART(後台)</title>
 </head>
 <body>
   <nav>
-    <div class="slogan">JSMART</div>
+    <!-- <div class="slogan">JSMART</div> -->
     <div class="navbar">
       <a href="./regist.php">註冊</a>
       <a href="./admin.php">會員管理</a>
       <a href="./newAdmin.php">新增頁面</a>
-      <a href="./logout.php?logout=1">登出</a>
+      <!-- <a href="./logout.php?logout=1">登出</a> -->
     </div>
   </nav>
   <form name="myForm" method="POST" action="./addUser.php">

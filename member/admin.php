@@ -34,12 +34,12 @@ $page = $page < 1 ? 1 : $page;
 <body>
 <header>
   <nav>
-    <div class="slogan">JSMART</div>
+    <!-- <div class="slogan">JSMART</div> -->
     <div class="navbar">
       <a href="./regist.php">註冊</a>
       <a href="./admin.php">會員管理</a>
       <a href="./newAdmin.php">新增頁面</a>
-      <a href="./logout.php?logout=1">登出</a>
+      <!-- <a href="./logout.php?logout=1">登出</a> -->
     </div>
   </nav>
 </header>
