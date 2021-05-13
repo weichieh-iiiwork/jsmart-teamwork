@@ -56,6 +56,6 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword']) ){
     
 }
 
-header("Refresh: 2.5; url=./shoppingCart/index.php");
+header("Refresh: 2.5; url=./login.php");
 // echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
 require_once './templates/sc/tpl-failure.php';

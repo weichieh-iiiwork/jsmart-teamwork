@@ -21,24 +21,35 @@ $totalCategories = $pdo->query("SELECT count(1) AS `count` FROM `categories`")->
         <form class="mx-auto col-8" name="myForm" enctype="multipart/form-data" method="POST" action="itemAdd.php">
 
             <div class="form-group">
-                <label class="mr-3" for="itemName">商品名稱</label>
-                <input class="form-control" type="text" name="itemName" value="" maxlength="100" />
+                <label class="" for="itemName">商品名稱</label>
+                <input class="form-control" type="text" name="itemName" value="" maxlength="100">
+            </div>
+
+            <!-- <div class="form-group">
+                <label class="" for="itemImg">商品圖片</label>
+                <input class="form-control" type="file" name="itemImg" value="" />
+            </div> -->
+            <div class="form-group">
+                <label class="" for="itemImg">商品圖片</label>
+                <div class="input-group">
+                    <div class="custom-file">
+
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02" name="itemImg">
+                        <label class="custom-file-label" for="inputGroupFile02"></label>
+                    </div>
+                </div>
             </div>
 
             <div class="form-group">
-                <label class="mr-3" for="itemImg">商品圖片</label>
-                <input class="form-control" type="file" name="itemImg" value="" />
+                <label class="" for="itemPrice">商品價格</label>
+                <input class="form-control" type="text" name="itemPrice" value="" maxlength="11">
             </div>
             <div class="form-group">
-                <label class="mr-3" for="itemPrice">商品價格</label>
-                <input class="form-control" type="text" name="itemPrice" value="" maxlength="11" />
+                <label class="" for="itemQty">商品數量</label>
+                <input class="form-control" type="text" name="itemQty" value="" maxlength="3">
             </div>
             <div class="form-group">
-                <label class="mr-3" for="itemQty">商品數量</label>
-                <input class="form-control" type="text" name="itemQty" value="" maxlength="3" />
-            </div>
-            <div class="form-group">
-                <label class="mr-3" for="itemCategoryId">商品種類</label>
+                <label class="" for="itemCategoryId">商品種類</label>
                 <select class="form-control" class="form-control-file" name="itemCategoryId">
                     <?php
                     $sql = "SELECT `categoryId`, `categoryName` FROM `categories` ";
@@ -58,11 +69,11 @@ $totalCategories = $pdo->query("SELECT count(1) AS `count` FROM `categories`")->
                 </select>
             </div>
             <div class="form-group">
-                <label class="mr-3" for="itemDescription">商品描述</label>
+                <label class="" for="itemDescription">商品描述</label>
                 <textarea class="form-control" type="text" name="itemDescription" value="" maxlength="100"></textarea>
             </div>
             <div>
-                <input class="btn btn-primary" type="submit" name="smb" value="新增">
+                <input class="btn btn-outline-dark" type="submit" name="smb" value="新增">
             </div>
 
         </form>

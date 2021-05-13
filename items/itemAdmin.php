@@ -57,7 +57,7 @@ $page = $page < 1 ? 1 : $page;
             <tbody>
                 <?php
                 //SQL 敘述
-                $sql = "SELECT `items`.`itemId`,`items`.`itemName`,`items`.`itemImg`,`items`.`itemPrice`, `items`.`itemQty`, `categories`.`categoryName`, `items`.`itemDescription`
+                $sql = "SELECT `items`.`itemId`,`items`.`itemName`,`items`.`itemImg`,`items`.`itemPrice`, `items`.`itemQty`, `categories`.`categoryName`, `categories`.`categoryParentId` , `items`.`itemDescription`
                     FROM `items`
                     INNER JOIN `categories`
                     ON `items`.`itemCategoryId` = `categories`. `categoryId`
@@ -98,7 +98,12 @@ $page = $page < 1 ? 1 : $page;
                             </td>
                             <td><?php echo $arr[$i]['itemPrice'] ?></td>
                             <td><?php echo $arr[$i]['itemQty'] ?></td>
-                            <td><?php echo $arr[$i]['categoryName'] ?></td>
+                            <td>
+                                <?php echo $arr[$i]['categoryName'] ?>
+                                <br>
+                                <?php //echo $arr[$i]['categoryParentId'] 
+                                ?>
+                            </td>
                             <td><?php echo nl2br($arr[$i]['itemDescription']) ?></td>
                             <td>
                                 <a href="./itemEdit.php?itemId=<?php echo $arr[$i]['itemId'] ?>">編輯</a>
@@ -178,7 +183,7 @@ $page = $page < 1 ? 1 : $page;
 
             </ul>
         </nav>
-        <input class="btn btn-secondary" type="submit" name="smb" value="多選刪除">
+        <input class="btn btn-outline-dark" type="submit" name="smb" value="多選刪除">
     </form>
 </div>
 

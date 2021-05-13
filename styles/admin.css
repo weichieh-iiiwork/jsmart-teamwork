@@ -1,0 +1,58 @@
+body {
+  font-family: "Nunito", "Noto Sans TC", sans-serif;
+  /* font-family: "Noto Sans TC", sans-serif; */
+  background-color: #ebebe6;
+  color: #3c3c50;
+}
+
+a {
+  color: #f0503c;
+}
+a:hover {
+  color: #3c3c50;
+}
+
+.nav_header {
+  background: linear-gradient(#ebebe6 50%, #fabea098);
+  color: #3c3c50;
+}
+.nav_header a {
+  text-decoration: none;
+  color: #5a4655;
+}
+.nav_header a:hover {
+  color: #f0503c;
+}
+.nav_buttons {
+  color: #3c3c50;
+}
+
+h3 {
+  color: #3c3c50;
+}
+h5 {
+  color: #3c3c50;
+}
+.h6:hover {
+  color: #f0503c;
+}
+.btn:hover {
+  color: #f0503c;
+}
+.page-link {
+  color: #3c3c50;
+  background-color: #ebebe6;
+}
+.page-link:hover {
+  color: #ebebe6;
+  background-color: #3c3c5015;
+}
+
+.item_detail {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* input upload button text */
+.custom-file-input:lang(en) ~ .custom-file-label::after {
+  content: "UPLOAD";
+}

@@ -32,10 +32,24 @@ require_once('../templates/itemTitle.php');
                 <label for="itemName">商品名稱</label>
                 <input class="form-control" type="text" name="itemName" value="<?php echo $arr['itemName'] ?>" maxlength="99">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="itemImg">商品圖片</label>
-                <img class="col-3" src="../images/items/<?php echo $arr['itemImg'] ?>"><br>
+                <img class="col-3" src="../images/items/ -->
+            <?php //echo $arr['itemImg'] 
+            ?>
+            <!-- "><br>
                 <input class="form-control" type="file" name="itemImg" value="">
+            </div> -->
+            <div class="form-group">
+                <label class="" for="itemImg">商品圖片</label>
+                <img class="col-3" src="../images/items/<?php echo $arr['itemImg'] ?>"><br>
+                <div class="input-group">
+                    <div class="custom-file">
+
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02" name="itemImg">
+                        <label class="custom-file-label" for="inputGroupFile02"></label>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="">商品價格</label>
@@ -86,7 +100,7 @@ require_once('../templates/itemTitle.php');
         ?>
 
         <div>
-            <input class="btn btn-primary" type="submit" name="smb" value="更新"></td>
+            <input class="btn btn-outline-dark" type="submit" name="smb" value="更新"></td>
         </div>
 
         <input type="hidden" name="itemId" value="<?php echo (int)$_GET['itemId']; ?>">

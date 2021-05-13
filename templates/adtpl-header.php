@@ -14,7 +14,17 @@ require_once '../admin_index/adminCheckSession.php';
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>JSMART(後台)</title>
+    <!-- my CSS -->
+    <link href="../styles/admin.css" rel="stylesheet" type="text/css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+
+    <title>JSMART</title>
     <style type="text/css">
         #contentTable {
             table-layout: fixed;
@@ -33,24 +43,25 @@ require_once '../admin_index/adminCheckSession.php';
 
 <body>
 
-    <nav>
+    <nav class="nav_header">
         <div class="d-flex shadow-sm flex-column flex-md-row align-items-center px-3 py-4">
             <h3 class="mr-md-auto pl-3">
                 <a class="text-dark" href="../admin_index/admin.php">JSMART（後台）</a>
-                </h3>
+            </h3>
             <div class="my-2 nav-buttons">
 
-                <a class="mr-3 text-info" href="../event/index.php">活動管理</a>
-                <a class="mr-3 text-info" href="../article/index.php">文章管理</a>
-                <a class="mr-3 text-info" href="../items/itemAdmin.php">商品管理</a>
-                <a class="mr-3 text-info" href="../category/category.php">類別管理</a>
-                
+                <a class="mr-3" href="../event/index.php">活動管理</a>
+                <a class="mr-3" href="../article/index.php">文章管理</a>
+                <a class="mr-3" href="../items/itemAdmin.php">商品管理</a>
+                <a class="mr-3" href="../category/category.php">類別管理</a>
+
+
                 <!-- 我的訂單顯示判斷 -->
                 <!-- isset($_SESSION["userAccount"]) -->
-                
+
                 <!-- 顯示註冊或會員您好 -->
                 <?php if (isset($_SESSION["adminAccount"])) { ?>
-                    <a class="mr-3 text-info" href="#">會員管理</a>
+                    <a class="mr-3" href="#">會員管理</a>
                     <span class="mr-3"><?php echo $_SESSION["adminAccount"] ?> 您好</span>
                 <?php } ?>
 
