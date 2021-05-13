@@ -61,7 +61,7 @@ require_once '../admin_index/adminCheckSession.php';
 
                 <!-- 顯示註冊或會員您好 -->
                 <?php if (isset($_SESSION["adminAccount"])) { ?>
-                    <a class="mr-3" href="#">會員管理</a>
+                    <a class="mr-3" href="../member/admin.php">會員管理</a>
                     <span class="mr-3"><?php echo $_SESSION["adminAccount"] ?> 您好</span>
                 <?php } ?>
 
