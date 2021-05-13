@@ -8,4 +8,6 @@ $objResponse = [];
 $objResponse['success'] = true;
 $objResponse['info'] = "更新成功";
 
-echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+// echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+require_once '../templates/sc/edittpl-success.php';
+

@@ -9,9 +9,10 @@ $objResponse['cartItemNum'] = 0;
 
 //判斷是否有收到cartQty和itemId的值
 if( !isset($_POST['cartQty']) || !isset($_POST['itemId']) ){
-    header("Refresh: 3; url=./index.php");
+    header("Refresh: 2; url=./index.php");
     $objResponse['info'] = "資料傳遞有誤";
-    echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+    // echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+    require_once '../templates/sc/carttpl-failure.php';
     exit();
 }
 
@@ -31,15 +32,18 @@ if($count > 0){
         "cartQty" => (int)$_POST['cartQty']
     ];
 
-    header("Refresh: 3; url=./myCart.php");
+    header("Refresh: 2; url=./myCart.php");
     $objResponse['success'] = true;
     $objResponse['info'] = "已加入購物車";
     $objResponse['cartItemNum'] = count($_SESSION['cart']);
+    require_once '../templates/sc/carttpl-success.php';
+
 
 } else {
-    header("Refresh: 3; url=./index.php");
+    header("Refresh: 2; url=./index.php");
     $objResponse['info'] = "查無商品項目";
     $objResponse['cartItemNum'] = count($_SESSION['cart']);
+    require_once '../templates/sc/carttpl-failure.php';
 }
 
-echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+// echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);

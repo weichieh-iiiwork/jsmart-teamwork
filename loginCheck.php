@@ -22,11 +22,6 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword']) ){
     }
     
 
-    // $sql = "SELECT `userAccount`, `userPassword`, `userName`
-    // FROM `users`
-    // WHERE `userAccount` = ?
-    // AND `userPassword` = ?";
-
     $arrParam = [
         $_POST['userAccount'],
         sha1($_POST['userPassword'])
@@ -39,10 +34,10 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword']) ){
         $arr = $stmt->fetchAll()[0];
 
         if( $_POST['identity'] === 'admin'){
-            header("Refresh: 3; url=./admin_index/admin.php");
+            header("Refresh: 2.5; url=./admin_index/admin.php");
             $_SESSION['adminAccount'] = $arr['adminAccount'];
         } elseif( $_POST['identity'] === 'users') {
-            header("Refresh: 3; url=./shoppingCart/index.php");
+            header("Refresh: 2.5; url=./shoppingCart/index.php");
             $_SESSION['userAccount'] = $arr['userAccount'];
         }
 
@@ -52,7 +47,8 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword']) ){
 
         $objResponse['success'] = true;
         $objResponse['info'] = "登入成功";
-        echo json_encode($objResponse,JSON_UNESCAPED_UNICODE);
+        // echo json_encode($objResponse,JSON_UNESCAPED_UNICODE);
+        require_once './templates/sc/tpl-success.php';
         exit();
     } 
 } else {
@@ -60,5 +56,6 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword']) ){
     
 }
 
-header("Refresh: 3; url=./index.php");
-echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+header("Refresh: 2.5; url=./shoppingCart/index.php");
+// echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+require_once './templates/sc/tpl-failure.php';

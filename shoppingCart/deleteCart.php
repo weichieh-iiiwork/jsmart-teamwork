@@ -6,10 +6,11 @@ $objResponse = [];
 $objResponse['success'] = false;
 $objResponse['info'] = "查無購物車編號";
 
-header("Refresh: 3; url=./myCart.php");
+header("Refresh: 2; url=./myCart.php");
 
 if( !isset($_GET['idx']) ){
-    echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+    // echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+    require_once '../templates/sc/deltpl-failure.php';
     exit();
 }
 
@@ -25,4 +26,5 @@ if( isset($_SESSION['cart'][$_GET["idx"]]) ){
     $objResponse['info'] = "已刪除購物車商品項目";
 }
 
-echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+// echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+require_once '../templates/sc/deltpl-success.php';

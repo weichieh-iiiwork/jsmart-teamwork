@@ -43,7 +43,7 @@ try{
     $pdo->rollBack();
 }
 
-header("Refresh: 3; url=./order.php");
+header("Refresh: 2; url=./order.php");
 
 //商品明細數量大於0，則釋放存置購物車的 session 變數
 if( $count > 0 ){
@@ -52,5 +52,6 @@ if( $count > 0 ){
 
     $objResponse['success'] = true;
     $objResponse['info'] = "訂單新增成功";
+    require_once '../templates/sc/ordertpl-success.php';
 }
-echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
+// echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
