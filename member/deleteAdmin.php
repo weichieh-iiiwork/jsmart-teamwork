@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once('./checkSession.php'); //引入判斷是否登入機制
 require_once('../db.inc.php'); //引用資料庫連線
 

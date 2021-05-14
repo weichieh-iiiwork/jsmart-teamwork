@@ -7,48 +7,70 @@ require_once("../templates/adtpl-header.php");
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSMART(後台)</title>
+  <title>註冊</title>
 </head>
 <body>
   <nav>
-    <!-- <div class="slogan">JSMART</div> -->
+    <div class="slogan">JSMART</div>
     <div class="navbar">
       <a href="./regist.php">註冊</a>
       <a href="./admin.php">會員管理</a>
       <a href="./newAdmin.php">新增頁面</a>
-      <!-- <a href="./logout.php?logout=1">登出</a> -->
+      <a href="./logout.php?logout=1">登出</a>
     </div>
   </nav>
   <form name="myForm" method="POST" action="./addUser.php">
-    <div>
-      <label for="inputUsername">帳號: </label>
-      <input type="text" id="inputAccount" name="userAccount" placeholder="請輸入帳號" value="">
-    </div>
-    <div>
-      <label for="inputPassword">密碼: </label>
-      <input type="text" id="inputPassword" name="userPassword" placeholder="請輸入密碼" value="">
-    </div>
-    <div>
-      <label for="inputPassword">姓名: </label>
-      <input type="text" id="inputName" name="userName" placeholder="請輸入姓名" value="">
-    </div>
-    <div>
-      <label for="inputBirthday">生日: </label>
-      <input type="text" id="inputBirthday" name="birthday" placeholder="請輸入生日" value="">
-    </div>
-    <div>
-      <label for="inputPhoneNumber">手機號碼: </label>
-      <input type="text" id="inputPhoneNumber" name="phoneNumber" placeholder="請輸入電話" value="">
-    </div>
-    <div>
-      <label for="inputEmail">Email: </label>
-      <input type="text" id="inputEmail" name="email" placeholder="請輸入信箱" value="">
-    </div>
-    <div>
-      <label for="inputAddress">住址: </label>
-      <input type="text" id="inputAddress" name="address" placeholder="請輸入地址" value="">
-    </div>
-    <button type="submit">註冊</button>
+  <table class="table-striped">
+      <tr>
+          <td class="border">帳號</td>
+          <td class="border">
+              <input type="text" name="userAccount" value="" maxlength="50" />
+          </td>
+      </tr>
+      <tr>
+          <td class="border">密碼</td>
+          <td class="border">
+              <input type="password" name="userPassword" value="" maxlength="40" />
+          </td>
+      </tr>
+      <tr>
+          <td class="border">密碼確認</td>
+          <td class="border">
+              <input type="password" name="passwordComfirm" value="" maxlength="40" />
+          </td>
+      </tr>
+      <tr>
+          <td class="border">姓名</td>
+          <td class="border">
+            <input type="text" name="userName" value="" maxlength="50" />
+          </td>
+      </tr>
+      <tr>
+          <td class="border">生日</td>
+          <td class="border">
+              <input type="text" name="birthday" value="" maxlength="10" />
+          </td>
+      </tr>
+      <tr>
+          <td class="border">手機號碼</td>
+          <td class="border">
+              <input type="text" name="phoneNumber" value="" maxlength="15" />
+          </td>
+      </tr>
+      <tr>
+          <td class="border">Email</td>
+          <td class="border">
+            <input type="text" name="email" value="" maxlength="50" />
+          </td>
+      </tr>
+      <tr>
+          <td class="border">地址</td>
+          <td class="border">
+              <input type="text" name="address" value="" maxlength="50" />
+          </td>
+      </tr>
+  </table>
+  <input type="submit" name="smb" value="註冊">
   </form>
 </body>
 </html>

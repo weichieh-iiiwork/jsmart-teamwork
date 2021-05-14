@@ -19,33 +19,25 @@ $page = $page < 1 ? 1 : $page;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSMART(後台)</title>
+  <title>我的 PHP 程式</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans+TC&display=swap" rel="stylesheet">
-  <style>
-    .border {
-      border: 1px solid;
-    }
-    .w200px {
-      width: 200px;
-    }
-  </style>
 </head>
 <body>
 <header>
   <nav>
-    <!-- <div class="slogan">JSMART</div> -->
+    <div class="slogan">JSMART</div>
     <div class="navbar">
       <a href="./regist.php">註冊</a>
       <a href="./admin.php">會員管理</a>
       <a href="./newAdmin.php">新增頁面</a>
-      <!-- <a href="./logout.php?logout=1">登出</a> -->
+      <a href="./logout.php?logout=1">登出</a>
     </div>
   </nav>
 </header>
   <hr>
   <form name="myForm" method="POST" action="deleteIdsAdmin.php">
-    <table class="border">
+    <table class="table-striped">
       <thead>
         <tr>
           <th class="border">選擇</th>
