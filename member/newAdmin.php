@@ -5,16 +5,16 @@ require_once("../templates/adtpl-header.php");
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>我的 PHP 程式</title>
+    <title>JSMART(後台)</title>
 </head>
 <body>
     <nav>
-        <div class="slogan">JSMART</div>
+        <!-- <div class="slogan">JSMART</div> -->
         <div class="navbar">
           <a href="./regist.php">註冊</a>
           <a href="./admin.php">會員管理</a>
           <a href="./newAdmin.php">新增頁面</a>
-          <a href="./logout.php?logout=1">登出</a>
+          <!-- <a href="./logout.php?logout=1">登出</a> -->
         </div>
       </nav>
 <hr />
