@@ -56,13 +56,16 @@ require '../templates/adtpl-header.php';
 
                     <form class="mb-5" name="cartForm" id="cartForm" method="POST" action="./addCart.php">
                         <div class="qty mt-5 mb-3 ml-2">
-                            數量: <input type="number" name="cartQty" value="1" maxlength="5" min="1" max="<?php echo $arrItem["itemQty"] ?>">
-                            <input type="hidden" name="itemId" value="<?php echo (int)$_GET['itemId'] ?>">
+                            <p>庫存數量: <?php echo $arrItem["itemQty"] ?></p>
+                            <!-- 庫存數量: <input type="number" name="cartQty" value="1" maxlength="5" min="1" max="<?php //echo $arrItem["itemQty"] 
+                                                                                                                ?>">
+                            <input type="hidden" name="itemId" value="<?php //echo (int)$_GET['itemId'] 
+                                                                        ?>"> -->
 
                         </div>
-                        <div class="ml-2">
+                        <!-- <div class="ml-2">
                             <input type="submit" class="btn btn-outline-dark" name="smb" value="加入購物車">
-                        </div>
+                        </div> -->
 
                     </form>
 
