@@ -6,5 +6,5 @@ session_start();
 session_destroy();
 
 //3 秒後跳頁
-header("Refresh: 3; url=./index.html");
+header("Refresh: 1; url=./index.html");
 echo "登出成功";

@@ -14,7 +14,7 @@ $arrParam = [
 $stmt = $pdo->prepare($sql);
 $stmt->execute($arrParam);
 
-header("Refresh: 3; url=./admin.php");
+header("Refresh: 1; url=./admin.php");
 
 if($stmt->rowCount() > 0) {
     echo "刪除成功";

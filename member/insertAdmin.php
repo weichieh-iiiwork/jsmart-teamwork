@@ -14,7 +14,7 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword'])
         $arrUsers = $stmtUsers->fetchAll();
         for( $i = 0; $i < count($arrUsers); $i++ ) {
             if ( $_POST['userAccount'] === $arrUsers[$i]['userAccount'] ) {
-                header("Refresh: 3; url = ./newAdmin.html");
+                header("Refresh: 1; url = ./newAdmin.html");
                 $msg = '帳號已經有人使用';
                 break;
             }
@@ -58,7 +58,7 @@ if( isset($_POST['userAccount']) && isset($_POST['userPassword'])
 else {
     $msg = "欄位沒有完全正確";
 }
-header("Refresh: 3; url = ./newAdmin.php");
+header("Refresh: 1; url = ./newAdmin.php");
 echo $msg;
 
 

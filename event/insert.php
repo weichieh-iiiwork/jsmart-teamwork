@@ -21,7 +21,7 @@ if ($_FILES["eventImg"]["error"] === 0) {
 
     //若上傳失敗，則不會繼續往下執行，回到管理頁面
     if (!$isSuccess) {
-        header("Refresh: 3; url=../event/index.php");
+        header("Refresh: 1; url=../event/index.php");
         echo "圖片上傳失敗";
         exit();
     }
@@ -41,11 +41,11 @@ $arr = [
 $pdo_stmt = $pdo->prepare($sql);
 $pdo_stmt->execute($arr);
 if ($pdo_stmt->rowCount() > 0) {
-    header("Refresh: 3; url=../event/index.php");
+    header("Refresh: 1; url=../event/index.php");
     echo "新增成功";
     // require_once("./templates/insert.html");
 
 } else {
-    header("Refresh: 3; url=../event/index.php");
+    header("Refresh: 1; url=../event/index.php");
     echo "新增失敗";
 }

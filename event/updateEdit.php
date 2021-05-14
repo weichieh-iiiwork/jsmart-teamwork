@@ -92,7 +92,7 @@ $arrParam[] = (int)$_POST['id'];
 $stmt = $pdo->prepare($sql);
 $stmt->execute($arrParam);
 
-header("Refresh: 3; url=../event/index.php");
+header("Refresh: 1; url=../event/index.php");
 
 if( $stmt->rowCount() > 0 ){
     echo "<h3>更新成功</h3>";

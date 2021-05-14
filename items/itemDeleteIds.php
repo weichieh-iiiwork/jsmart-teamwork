@@ -29,7 +29,7 @@ if ($stmtGetImg->rowCount() > 0) {
     $count = $stmtDelete->rowCount();
 }
 
-header("Refresh: 3; url=./itemAdmin.php");
+header("Refresh: 1; url=./itemAdmin.php");
 
 if ($count > 0) {
     echo "刪除成功";

@@ -12,7 +12,7 @@ if ($_FILES['itemImg']['error'] === 0) {
     $isSuccess = move_uploaded_file($_FILES['itemImg']['tmp_name'], "../images/items/" . $imgFileName);
 
     if (!$isSuccess) {
-        header("Refresh: 3; url=./itemAdmin.php");
+        header("Refresh: 1; url=./itemAdmin.php");
         echo "圖片上傳失敗";
         exit();
     }
@@ -34,11 +34,11 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute($arrParam);
 
 if ($stmt->rowCount() > 0) {
-    header("Refresh: 3; url=./itemAdmin.php");
+    header("Refresh: 1; url=./itemAdmin.php");
     $objResponse['success'] = true;
     $objResponse['info'] = "新增成功";
     echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
 } else {
-    header("Refresh: 3; url=./itemAdmin.php");
+    header("Refresh: 1; url=./itemAdmin.php");
     echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
 }

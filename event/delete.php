@@ -1,5 +1,5 @@
 <?php
-require_once('../db.inc.php'); 
+require_once('../db.inc.php');
 
 //先查詢出特定 id (editId) 資料欄位中的大頭貼檔案名稱
 $sqlGetImg = "SELECT `eventImg` FROM `event` WHERE `id` = ? ";
@@ -14,15 +14,15 @@ $arrGetImgParam = [
 $stmtGetImg->execute($arrGetImgParam);
 
 //若有找到 studentImg 的資料
-if($stmtGetImg->rowCount() > 0) {
+if ($stmtGetImg->rowCount() > 0) {
     //取得指定 id 的學生資料 (1筆)
     $arrImg = $stmtGetImg->fetchAll()[0];
 
     //若是 studentImg 裡面不為空值，代表過去有上傳過
-    if($arrImg['eventImg'] !== NULL){
+    if ($arrImg['eventImg'] !== NULL) {
         //刪除實體檔案
-        @unlink("../images/event/".$arrImg['eventImg']);
-    }     
+        @unlink("../images/event/" . $arrImg['eventImg']);
+    }
 }
 
 // SQL 語法
@@ -36,9 +36,9 @@ $arrParam = [
 $stmt = $pdo->prepare($sql);
 $stmt->execute($arrParam);
 
-header("Refresh: 3; url=../event/index.php");
+header("Refresh: 1; url=../event/index.php");
 
-if($stmt->rowCount() > 0) {
+if ($stmt->rowCount() > 0) {
     echo "<h3>刪除成功</h3>";
     // echo"<img src=source.gif>";
 

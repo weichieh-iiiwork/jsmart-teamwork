@@ -55,7 +55,7 @@ $arrParam[] = (int)$_POST['itemId'];
 $stmt = $pdo->prepare($sql);
 $stmt->execute($arrParam);
 
-header("Refresh:3; url=./itemEdit.php?itemId={$_POST['itemId']}");
+header("Refresh:1; url=./itemEdit.php?itemId={$_POST['itemId']}");
 
 if ($stmt->rowCount() > 0) {
     $objResponse['success'] = true;

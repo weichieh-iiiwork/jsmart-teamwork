@@ -16,7 +16,7 @@ if( !isset($_SESSION['adminAccount']) ){
     $objResponse['success'] = false;
     $objResponse['info'] = "請確實登入";
 
-    header("Refresh: 3; url=../login.php");
+    header("Refresh: 1; url=../login.php");
     echo json_encode($objResponse, JSON_UNESCAPED_UNICODE);
     exit();
 }

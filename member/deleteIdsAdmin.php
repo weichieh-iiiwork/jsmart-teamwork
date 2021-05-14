@@ -14,7 +14,7 @@ $stmtDelte = $pdo->prepare($sqlDelete);
 $stmtDelte->execute([$strIds]);
 $count = $stmtDelte->rowCount();
 
-header("Refresh: 3; url=./admin.php");
+header("Refresh: 1; url=./admin.php");
 if($count > 0) {
     echo "刪除成功";
 } else {

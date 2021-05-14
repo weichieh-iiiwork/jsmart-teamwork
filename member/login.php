@@ -12,14 +12,14 @@
     if( $stmt->rowCount() > 0 ){
       session_start();
       $_SESSION['acc'] = $_POST['acc'];
-      header("Refresh: 5; url=./admin.php");
+      header("Refresh: 1; url=./admin.php");
       echo "登入成功";
     } else {
-      header("Refresh: 5; url=./login.php");
+      header("Refresh: 1; url=./login.php");
       echo "登入失敗";
     }
   } else {
-    header("Refresh: 5; url=./login.php");
+    header("Refresh: 1; url=./login.php");
     echo "輸入欄位不存在";
   }
 ?>
